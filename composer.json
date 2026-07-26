@@ -1,0 +1,31 @@
+{
+    "name": "tez/utils-str",
+    "type": "library",
+    "description": "String utility helpers",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Tez\\Utils\\Str\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tez\\Utils\\Tests\\Str\\": "tests/"
+        }
+    },
+    "require": {
+        "php": ">=8.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.0",
+        "jetbrains/phpstorm-attributes": "^1.0",
+        "phpstan/phpstan": "^2.0",
+        "friendsofphp/php-cs-fixer": "^3.0"
+    },
+    "scripts": {
+        "cs-fix": "php-cs-fixer fix",
+        "cs-check": "php-cs-fixer fix --dry-run --diff",
+        "phpstan": "phpstan analyse",
+        "test": "phpunit --testsuite Unit --colors=always"
+    }
+}
