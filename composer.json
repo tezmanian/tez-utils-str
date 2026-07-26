@@ -1,7 +1,7 @@
 {
     "name": "tez/utils-str",
     "type": "library",
-    "description": "String utility helpers",
+    "description": "Focused PHP string utilities: case conversion, template interpolation, masking, cryptographically secure random strings, URL slugs, and multibyte-aware truncation. PHP 8.3+, no dependencies.",
     "license": "MIT",
     "autoload": {
         "psr-4": {
