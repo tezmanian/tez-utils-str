@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Tez\Utils\Tests\Str;
+namespace Tezmanian\Utils\Tests\Str;
 
 use PHPUnit\Framework\TestCase;
-use Tez\Utils\Str\Slugify;
+use Tezmanian\Utils\Str\Slugify;
 
 final class SlugifyTest extends TestCase
 {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tez\Utils\Str;
+namespace Tezmanian\Utils\Str;
 
 final class Truncate
 {

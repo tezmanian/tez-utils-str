@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Tez\Utils\Tests\Str;
+namespace Tezmanian\Utils\Tests\Str;
 
 use PHPUnit\Framework\TestCase;
-use Tez\Utils\Str\CaseConverter;
+use Tezmanian\Utils\Str\CaseConverter;
 
 final class CaseConverterTest extends TestCase
 {

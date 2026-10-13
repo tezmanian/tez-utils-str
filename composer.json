@@ -1,16 +1,34 @@
 {
-    "name": "tez/utils-str",
+    "name": "tezmanian/utils-str",
     "type": "library",
     "description": "Focused PHP string utilities: case conversion, template interpolation, masking, cryptographically secure random strings, URL slugs, and multibyte-aware truncation. PHP 8.3+, no dependencies.",
+    "keywords": [
+        "string",
+        "slug",
+        "mask",
+        "random",
+        "php"
+    ],
+    "homepage": "https://github.com/tezmanian/tez-utils-str",
     "license": "MIT",
+    "authors": [
+        {
+            "name": "René Halberstadt",
+            "email": "tezmanian@gmail.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/tezmanian/tez-utils-str/issues",
+        "source": "https://github.com/tezmanian/tez-utils-str"
+    },
     "autoload": {
         "psr-4": {
-            "Tez\\Utils\\Str\\": "src/"
+            "Tezmanian\\Utils\\Str\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Tez\\Utils\\Tests\\Str\\": "tests/"
+            "Tezmanian\\Utils\\Tests\\Str\\": "tests/"
         }
     },
     "require": {

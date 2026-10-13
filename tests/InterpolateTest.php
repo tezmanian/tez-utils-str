@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Tez\Utils\Tests\Str;
+namespace Tezmanian\Utils\Tests\Str;
 
 use PHPUnit\Framework\TestCase;
-use Tez\Utils\Str\Interpolate;
+use Tezmanian\Utils\Str\Interpolate;
 
 final class InterpolateTest extends TestCase
 {

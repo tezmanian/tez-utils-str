@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Tez\Utils\Tests\Str;
+namespace Tezmanian\Utils\Tests\Str;
 
 use PHPUnit\Framework\TestCase;
-use Tez\Utils\Str\Mask;
+use Tezmanian\Utils\Str\Mask;
 
 final class MaskTest extends TestCase
 {

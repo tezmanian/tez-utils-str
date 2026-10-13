@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Tez\Utils\Tests\Str;
+namespace Tezmanian\Utils\Tests\Str;
 
 use PHPUnit\Framework\TestCase;
-use Tez\Utils\Str\Random;
+use Tezmanian\Utils\Str\Random;
 
 final class RandomTest extends TestCase
 {

@@ -1,12 +1,19 @@
 # tez-utils-str
 
+[![CI](https://github.com/tezmanian/tez-utils-str/actions/workflows/php.yml/badge.svg)](https://github.com/tezmanian/tez-utils-str/actions/workflows/php.yml)
+[![Packagist Version](https://img.shields.io/packagist/v/tezmanian/utils-str)](https://packagist.org/packages/tezmanian/utils-str)
+[![PHP](https://img.shields.io/packagist/php-v/tezmanian/utils-str)](https://packagist.org/packages/tezmanian/utils-str)
+[![License: MIT](https://img.shields.io/packagist/l/tezmanian/utils-str)](LICENSE)
+
 Focused PHP string utilities: case conversion, template interpolation, masking, cryptographically secure random strings, URL slugs, and multibyte-aware truncation. PHP 8.3+, no dependencies.
 
 ## Installation
 
 ```bash
-composer require tez/utils-str
+composer require tezmanian/utils-str
 ```
+
+Package: [`tezmanian/utils-str`](https://packagist.org/packages/tezmanian/utils-str) · Namespace: `Tezmanian\Utils\Str`
 
 ## Components
 
@@ -26,7 +33,7 @@ composer require tez/utils-str
 Converts any supported format (camelCase, PascalCase, snake_case, kebab-case, SCREAMING_SNAKE_CASE) into any other. All formats are interchangeable.
 
 ```php
-use Tez\Utils\Str\CaseConverter;
+use Tezmanian\Utils\Str\CaseConverter;
 
 CaseConverter::toSnake('userProfileName');    // 'user_profile_name'
 CaseConverter::toSnake('UserProfileName');    // 'user_profile_name'
@@ -49,7 +56,7 @@ CaseConverter::toSnake('HTMLParser');        // 'html_parser'
 Replaces `{placeholders}` in a template string with values from an array. Supports dot-notation for nested keys. Throws `InvalidArgumentException` for missing keys by default; a fallback can be provided.
 
 ```php
-use Tez\Utils\Str\Interpolate;
+use Tezmanian\Utils\Str\Interpolate;
 
 Interpolate::render(
     'Hello {name}, you have {count} messages.',
@@ -80,7 +87,7 @@ Interpolate::render('Hello :name!', ['name' => 'Bob'], prefix: ':', suffix: '');
 Masks sensitive strings for display in logs, UIs, and API responses.
 
 ```php
-use Tez\Utils\Str\Mask;
+use Tezmanian\Utils\Str\Mask;
 
 // Email — keeps first character of the local part
 Mask::email('test@example.com');           // 't***@example.com'
@@ -107,7 +114,7 @@ Mask::custom('HelloWorld', start: 2, end: 2, char: '#'); // 'He######ld'
 Generates cryptographically secure random strings using `random_bytes()`. Uses rejection sampling for uniform distribution — no modulo bias.
 
 ```php
-use Tez\Utils\Str\Random;
+use Tezmanian\Utils\Str\Random;
 
 // Hex token (lowercase [0-9a-f])
 Random::token();      // 32-character hex string (default)
@@ -132,7 +139,7 @@ Throws `InvalidArgumentException` when `$length < 1` or the charset is empty.
 Converts text to a URL-safe slug. Transliterates common non-ASCII characters (German umlauts, French accents, Spanish ñ, Nordic æøå, and more) before lowercasing and replacing non-alphanumeric characters.
 
 ```php
-use Tez\Utils\Str\Slugify;
+use Tezmanian\Utils\Str\Slugify;
 
 Slugify::slug('Hello World');          // 'hello-world'
 Slugify::slug('Ärger mit Umlauten!'); // 'aerger-mit-umlauten'
@@ -154,7 +161,7 @@ Slugify::slug('Hello World', '_');    // 'hello_world'
 Multibyte-aware truncation. By default snaps back to the last complete word so no word is split. The total result length (including suffix) never exceeds `$limit`.
 
 ```php
-use Tez\Utils\Str\Truncate;
+use Tezmanian\Utils\Str\Truncate;
 
 // Word-boundary truncation (default)
 Truncate::chars('The quick brown fox jumps over the lazy dog', 20);
@@ -189,6 +196,15 @@ Throws `InvalidArgumentException` when `$limit` is shorter than the suffix lengt
 - PHP 8.3+
 - No runtime dependencies
 
+## Development
+
+```bash
+make build && make install
+make ci   # audit, PHPStan, code style, tests
+```
+
 ## License
 
-MIT
+MIT — see [LICENSE](LICENSE).
+
+Author: René Halberstadt
